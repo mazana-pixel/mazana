@@ -1,0 +1,35 @@
+﻿<Window x:Class="mazanabe.EditUserDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Edit User" Height="300" Width="400">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Username Field -->
+        <TextBlock Grid.Row="0" Text="Username:" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="txtUsername" Grid.Row="0" Margin="100,5,5,5" HorizontalAlignment="Stretch"/>
+
+        <!-- Email Field -->
+        <TextBlock Grid.Row="1" Text="Email:" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="txtEmail" Grid.Row="1" Margin="100,5,5,5" HorizontalAlignment="Stretch"/>
+
+        <!-- User Type Dropdown -->
+        <TextBlock Grid.Row="2" Text="User Type:" VerticalAlignment="Center" Margin="5"/>
+        <ComboBox x:Name="cmbUserType" Grid.Row="2" Margin="100,5,5,5" HorizontalAlignment="Stretch">
+            <ComboBoxItem Content="Premium"/>
+            <ComboBoxItem Content="Freemium"/>
+        </ComboBox>
+
+        <!-- Save and Cancel Buttons -->
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right" Margin="5">
+            <Button x:Name="cmdSave" Content="Save" Width="75" Margin="5" Click="SaveButton_Click"/>
+            <Button x:Name="cmdCancel" Content="Cancel" Width="75" Margin="5" Click="CancelButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
